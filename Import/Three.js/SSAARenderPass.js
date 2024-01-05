@@ -6,9 +6,9 @@ import {
 	ShaderMaterial,
 	UniformsUtils,
 	WebGLRenderTarget
-} from '/Import/Three.js/three.module.js';
-import { Pass, FullScreenQuad } from '/Import/Three.js/Pass.js';
-import { CopyShader } from '/Import/Three.js/CopyShader.js';
+} from './Import/Three.js/three.module.js';
+import { Pass, FullScreenQuad } from './Import/Three.js/Pass.js';
+import { CopyShader } from './Import/Three.js/CopyShader.js';
 
 /**
 *
