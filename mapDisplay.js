@@ -1,9 +1,9 @@
-import * as THREE from "/Import/Three.js/three.module.js"
-import { FBXLoader } from "/Import/Three.js/FBXLoader.js"
-import { OrbitControls } from "/Import/Three.js/OrbitControls.js"
-import { info } from "/script.js"
+import * as THREE from "./Import/Three.js/three.module.js"
+import { FBXLoader } from "./Import/Three.js/FBXLoader.js"
+import { OrbitControls } from "./Import/Three.js/OrbitControls.js"
+import { info } from "./script.js"
 
-import { Gamecamera } from "/script.js"
+import { Gamecamera } from "./script.js"
 
 let camera, scene, renderer, light, ambientLight, controls, player
 
