@@ -1,4 +1,4 @@
-import { player } from "/script.js"
+import { player } from "./script.js"
 
 var Stats = function () {
 
