@@ -1,6 +1,6 @@
-import * as THREE from "/Import/Three.js/three.module.js"
-import { FBXLoader } from "/Import/Three.js/FBXLoader.js"
-import { player, Gamecamera, controls } from "/script.js"
+import * as THREE from "./Import/Three.js/three.module.js"
+import { FBXLoader } from "./Import/Three.js/FBXLoader.js"
+import { player, Gamecamera, controls } from "./script.js"
 
 let Weaponscene, Weaponcamera, renderer, light, ambientLight
 
