@@ -1,11 +1,11 @@
-import * as THREE from "/Import/Three.js/three.module.js"
-import { CSS2DObject } from "/Import/Three.js/CSS2DRenderer.js"
-import { Gamescene } from "/script.js"
-import { Gamecamera } from "/script.js"
-import { Displaymenu } from "/script.js"
-import { removeZombie } from "/script.js"
-import { dealDamage } from "/script.js"
-import { delta } from "/script.js"
+import * as THREE from "./Import/Three.js/three.module.js"
+import { CSS2DObject } from "./Import/Three.js/CSS2DRenderer.js"
+import { Gamescene } from "./script.js"
+import { Gamecamera } from "./script.js"
+import { Displaymenu } from "./script.js"
+import { removeZombie } from "./script.js"
+import { dealDamage } from "./script.js"
+import { delta } from "./script.js"
 
 class zombie {
   constructor(x,y,z,hp,dmg,speed,collisions) {
