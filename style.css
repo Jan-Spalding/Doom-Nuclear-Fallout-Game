@@ -1,0 +1,832 @@
+body {
+  margin:0;
+  padding:0;
+  overflow:hidden;
+  cursor: url("/Import/Images/Custom Cursor.png"), default;
+  font-family:arial;
+  color:white;
+}
+
+
+
+/* === IN-GAME MENU === */
+
+#menu {
+  width:100%;
+  height:100%;
+  position:absolute;
+  text-align:center;
+  z-index:2;
+}
+
+#menuBackground {
+  position:absolute;
+  height:100%;
+  width:100%;
+  background: url("/Import/Images/menuBackground.gif");
+  filter: blur(6px);
+  background-position:center;
+  background-size:cover;
+  background-repeat:no-repeat;
+}
+
+#menuContent {
+  position:absolute;
+  left:5%;
+  top:25%;
+}
+
+
+p {
+  margin:5px;
+}
+
+
+/* === CROSSHAIRS === */
+
+#crossHair {
+  position:absolute;
+  background-color:white;
+  width:3px;
+  height:3px;
+  border-radius:50%;
+  visibility:visible;
+}
+
+#crossHairHolder {
+  display: flex;
+  position:absolute;
+  justify-content:center;
+  align-items:center;
+  width:100%;
+  height:100%;
+}
+
+#SniperScope {
+  height:100%;
+  width:100%;
+  position:absolute;
+  visibility:hidden;
+}
+
+/* === START MENU === */
+
+#start {
+  position:absolute;
+  height:100%;
+  width:100%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  z-index:9;
+  background-image: url("/Import/Images/Background.jpg");
+  filter: blur(6px);
+  background-position:center;
+  background-size:cover;
+  background-repeat:no-repeat;
+}
+
+#startContent {
+  position:absolute;
+  height:100%;
+  width:100%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-direction:column;
+}
+
+#logo {
+  position:relative;
+  height:40%;
+  width:50%;
+  background-image: url("/Import/Images/Logo.png");
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-position:center;
+  z-index:10;
+}
+
+.buttons {
+  z-index:10;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-direction:column;
+  padding-bottom:50px;
+}
+
+.buttons button {
+  text-decoration:none;
+  border:none;
+  background:none;
+  margin-bottom:20px;
+  cursor: url("/Import/Images/Custom Pointer.png"), pointer;
+}
+
+.buttons button:hover {
+  transform: scale(1.5,1.5)
+}
+
+.buttons button img {
+  height:50px;
+  width:200px;
+}
+
+.keybutton {
+  color:black !important;
+}
+
+#black {
+  background-color:black;
+  position:absolute;
+  height:100%;
+  width:100%;
+  z-index:7;
+}
+
+/* === CONSOLE ===  */
+
+#consoleHolder {
+  z-index:1000;
+  position:absolute;
+  height:100%;
+  width:100%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-direction:column;
+  visibility: hidden;
+}
+
+#consoleOutput {
+  height:80%;
+  width:100%;
+  background:rgba(0,0,0,0.5);
+}
+
+.consoleMessage {
+  text-decoration:none;
+  list-style-type:none;
+  color:white;
+}
+
+#consoleInput {
+  height:10%;
+  width:100%;
+  border: 2px solid black;
+  background:white;
+  color:black !important;
+  font-size: 30px;
+}
+
+@media (max-width:1000px) {
+  #menuContent {
+    height:80%;
+    overflow-x:scroll;
+  }
+}
+
+/*  === LOADING SCREEN === */
+
+@keyframes slides {
+  0% {opacity:0;}
+  10% {opacity:1;}
+  90% {opacity:1;}
+  100% {opacity:0;}
+}
+
+#first {
+  position:absolute;
+  height:100%;
+  width:100%;
+  opacity:0;
+  background-image: url("/Import/Images/img1.jpg");
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-position:center;
+  animation-name: none;
+  animation-duration: 4s;
+/*   animation-iteration-count: infinite; */
+  z-index: 8
+}
+
+#second {
+  position:absolute;
+  height:100%;
+  width:100%;
+  opacity:0;
+  background-image: url("/Import/Images/img2.jpg");
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-position:center;
+  animation-name: none;
+  animation-duration: 4s;
+  z-index: 8
+}
+
+#third {
+  position:absolute;
+  height:100%;
+  width:100%;
+  opacity:0;
+  background-image: url("/Import/Images/img3.jpg");
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-position:center;
+  animation-name: none;
+  animation-duration: 4s;
+  z-index: 8
+}
+
+#fourth {
+  position:absolute;
+  height:100%;
+  width:100%;
+  opacity:0;
+  background-image: url("/Import/Images/img4.jpg");
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-position:center;
+  animation-name: none;
+  animation-duration: 4s;
+  z-index: 8
+}
+
+#loading {
+  border:2px solid white;
+  background-color: rgba(0,0,0,0.5);
+  height:50px;
+  width:300px;
+  position:absolute;
+  bottom:15px;
+  right:15px;
+  z-index:8;
+}
+
+#bar {
+  position:absolute;
+  height:100%;
+  width:0%;
+  background-color:white;
+}
+
+
+/*  === KEYBINDS === */
+#keybinds {
+  position: absolute;
+  height:100%;
+  width:100%;
+  display: none;
+  align-items:center;
+  justify-content:center;
+  z-index: 9;
+}
+
+#keybindsContent {
+  width:800px;
+  height:600px;
+  background-color:black;
+  opacity: 0.95;
+  padding:30px;
+  overflow-y:scroll;
+}
+
+.div {
+  width:100%;
+  height:50px;
+  margin-bottom:4px;
+}
+
+.name {
+  color:white;
+  float:left;
+  font-size:35px;
+}
+
+.button {
+  float:right;
+  margin:10px;
+}
+
+#movement {
+  background-color:rgb(34, 34, 34);
+  padding:15px;
+}
+
+#weapon {
+  background-color:rgb(34, 34, 34);
+  padding:15px;
+}
+
+#back {
+  float:left;
+  display:inline-block;
+}
+
+#default {
+  float:right;
+  display:inline-block;
+}
+
+.output {
+  color:white;
+  float:right;
+}
+
+/* === SETTINGS === */
+#setting {
+  visibility: hidden;
+  position:absolute;
+  height:100%;
+  width:100%;
+  z-index:11;
+  display:flex;
+  align-items:center;
+  justify-content: center;
+}
+
+#settingBackground {
+  position:absolute;
+  height:100%;
+  width:100%;
+  background: url("/Import/Images/skull.jpg");
+  filter: blur(6px);
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-position:center;
+}
+
+#settingsHolder {
+  height:95%;
+  width:95%;
+  z-index:11;
+/*   background-color: rgba(0,0,0,0.8); */
+}
+
+#backk {
+  position:absolute;
+  text-decoration:none;
+  border:none;
+  background:none;
+  bottom:5%;
+  left:0;
+  z-index:12;
+  cursor: url("/Import/Images/Custom Pointer.png"), pointer;
+}
+
+#backk:hover {
+  transform: scale(1.5,1.5)
+}
+
+#backk img {
+  height:60px;
+  width:250px;
+}
+
+#sliderOutput {
+  width:40px;
+  overflow: hidden;
+}
+
+#scopeOutput {
+  width:40px;
+  overflow:hidden;
+}
+
+/* === CONFIRMATION === */
+
+#confirm {
+  position:absolute;
+  height:100%;
+  width:100%;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  z-index:150;
+}
+
+#confirmHolder {
+  position:absolute;
+  height:200px;
+  width:400px;
+  display:flex;
+  justify-content: center;
+  align-items:center;
+  flex-direction:column;
+  background-color: rgba(0,0,0,0.5)
+}
+
+/* === INFORMATION DISPLAY === */
+
+#info {
+  position:absolute;
+  height:100%;
+  width:100%;
+  background-color: black;
+  display:none;
+  z-index:3;
+}
+
+#nav {
+  position:absolute;
+  height:20%;
+  width:100%;
+  top:0;
+  background-color:red;
+  display:flex;
+  justify-content: center;
+  align-items:center;
+}
+
+#infoHolder {
+  position:absolute;
+  height:80%;
+  width:100%;
+  bottom:0;
+  background-color:white;
+}
+
+/* ==WEAPONS== */
+#weapons {
+  position:absolute;
+  height:100%;
+  width:100%;
+  background-color:purple;
+  display:flex;
+  justify-content: center;
+  align-items:center;
+  visibility: visible;
+}
+
+#all {
+  position:relative;
+  height:100%;
+  width:20%;
+  background-color:blue;
+}
+
+#allHolder {
+  position:absolute;
+  height:100%;
+  width:100%;
+  display:flex;
+  justify-content: center;
+  align-items:center;
+  flex-direction:column;
+  overflow-y:scroll;
+}
+
+#display {
+  position:relative;
+  height:100%;
+  width:80%;
+  background-color:white;
+}
+
+/* ==MAP== */
+#map {
+  visibility:hidden;
+  position:absolute;
+  height:100%;
+  width:100%;
+  background-color:black;
+}
+
+#mapDisplay {
+  position:absolute;
+  heigth:100%;
+  width:100%;
+  bottom:0;
+}
+
+#key {
+  position:absolute;
+  height:200px;
+  width:400px;
+  bottom:5%;
+  right:5%;
+  background-color:white;
+  z-index:1;
+}
+
+#keyHolder {
+  position:absolute;
+  height:100%;
+  width:100%;
+  display:flex;
+  justify-content:space-evenly;
+  align-items:center;
+}
+
+
+#text {
+  display:flex;
+  justify-content: space-evenly;
+  align-items:space-evenly;
+  flex-direction:column;
+}
+
+#text p {
+  color:black !important;
+}
+
+#button {
+  display:flex;
+  justify-content: space-evenly;
+  align-items:space-evenly;
+  flex-direction:column;
+}
+
+/* === OFFSET DISPLAY === */
+#offsetDisplay {
+  position:relative;
+  background-color:white;
+  height:108px;
+  width:192px;
+}
+
+#reference {
+  position:absolute;
+  background-color:black;
+  height:20px;
+  width:20px;
+  bottom: 5px;
+  right:5px;
+}
+
+/* === GAME UI === */
+#hud {
+  position:absolute;
+  height:100%;
+  width:100%;
+  z-index:1;
+}
+
+/* ==LEFT== */
+
+#left {
+  position:absolute;
+  height:100px;
+  width:300px;
+  bottom:10%;
+  left:5%;
+  background-color:rgba(0,0,0,0.8);
+  transform:rotate(-7deg);
+  display:flex;
+  justify-content: space-evenly;
+  align-items:space-evenly;
+  flex-direction:column;
+}
+
+#sheild {
+  height:40%;
+  width:100%;
+  display:flex;
+  align-items:center;
+  justify-content:space-evenly;
+}
+
+#health {
+  height:40%;
+  width:100%;
+  display:flex;
+  align-items:center;
+  justify-content:space-evenly;
+}
+
+#snumber {
+  height:100%;
+  width:40px;
+  background-color:rgba(0,0,0,0.5);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+#snumber p {
+  font-family:arial;
+  color:white;
+  margin:0;
+  padding:0;
+}
+
+#hnumber {
+  height:100%;
+  width:40px;
+  background-color:rgba(0,0,0,0.5);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+#hnumber p {
+  font-family:arial;
+  color:white;
+  margin:0;
+  padding:0;
+}
+
+#sheildIcon {
+  height:100%;
+  width:40px;
+  background-color:rgba(0,0,0,0.5);
+}
+
+#sheildIcon img {
+  height:100%;
+  width:100%;
+}
+
+#healthIcon {
+  height:100%;
+  width:40px;
+  background-color:rgba(0,0,0,0.5);
+}
+
+#healthIcon img {
+  height:100%;
+  width:100%;
+}
+
+#sheildBack {
+  height:80%;
+  width:200px;
+  background-color:rgba(0,0,0,0.5);
+}
+
+#healthBack {
+  height:100%;
+  width:200px;
+  background-color:rgba(0,0,0,0.5);
+}
+
+#sheildBar {
+  height:100%;
+  width:100%;
+  background-color:rgba(0,255,0,0.6);
+  z-index:1;
+}
+
+#healthBar {
+  height:100%;
+  width:100%;
+  background-color:rgba(255,0,0,0.6);
+  z-index:1;
+}
+
+/* ==RIGHT== */
+
+#right {
+  position:absolute;
+  height:100px;
+  width:300px;
+  bottom:10%;
+  right:5%;
+  background-color:rgba(0,0,0,0.8);
+  transform:rotate(7deg);
+  display:flex;
+  justify-content:space-evenly;
+  align-items:center;
+}
+
+#rightHolder {
+  position:relative;
+  height:95%;
+  width:150px;
+  display:flex;
+  justify-content:space-evenly;
+  align-items:center;
+  flex-direction:column;
+}
+
+#weaponIcon {
+  position:relative;
+  height:95%;
+  width:150px;
+  background-color:rgba(0,0,0,0.5);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+#ammunition {
+  height:50%;
+  width:90%;
+}
+
+#ammoBack {
+  height:100%;
+  width:100%;
+  background-color:rgba(0,0,0,0.5)
+}
+
+#ammoBar {
+  height:100%;
+  width:100%;
+  background-color:rgba(0,150,255,0.6)
+}
+
+#imgPistol {
+  position:absolute;
+  height:80%;
+  width:80%;
+  visibility:visible
+}
+#imgSniper {
+  position:absolute;
+  height:80%;
+  width:80%;
+  visibility:hidden
+}
+#imgKnife {
+  position:absolute;
+  height:80%;
+  width:80%;
+  visibility:hidden
+}
+#imgRifle {
+  position:absolute;
+  height:80%;
+  width:80%;
+  visibility:hidden
+}
+
+#weapInfo {
+  background-color:rgba(0,0,0,0.5);
+  height:30%;
+  width:90%;
+}
+
+#name {
+  padding:0;
+  margin-right:10px;
+  float:right;
+}
+
+#realTimeInfo {
+  position:absolute;
+  top:50%;
+  right:49vw;
+}
+
+#hit {
+  position:absolute;
+  opacity:0;
+  height:100%;
+  width:100%;
+  background: url("/Import/Images/Hit.png");
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-position:center;
+}
+
+/* LABLES */
+.lableBack {
+  position:absolute;
+  height:50px;
+  width:50px;
+  margin-top:-5em;
+}
+
+.lableText {
+  font-size:30px;
+  color:red;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+/* WIN AND LOSE */
+#win {
+  position:absolute;
+  height:100%;
+  width:100%;
+  background-color:black;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-evenly;
+  align-items:center;
+  visibility: hidden;
+  z-index:100;
+}
+
+#lose {
+  position:absolute;
+  height:100%;
+  width:100%;
+  background-color:black;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-evenly;
+  align-items:center;
+  visibility: hidden;
+  z-index:100;
+}
+
+#lose p {
+  font-size:60px;
+}
+
+#win p {
+  font-size:60px;
+}

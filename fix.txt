@@ -1,0 +1,17 @@
+== GAME ==
+- Manage AI so few spawn at a time
+- Must kill all AI before proceeding to the next room 
+- Add win and lose conditions with appropriate ui
+
+
+== SCENE ==
+
+- Fix Railings
+
+
+== MENU ==
+
+== VIDEO ==
+- Wait until map is coloured
+- Animations
+- Export mp4

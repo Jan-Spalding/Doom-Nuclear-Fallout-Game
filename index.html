@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <title>DOOM! Nuclear Fallout</title>
+    <link rel="icon" type="image/x-icon" href="/Import/Images/favicon.png">
+  </head>
+  <body>
+
+    <!--=== INFORMATION DISPLAY === -->  
+
+    <div id="info">
+      <div id="nav">
+        <button id="toMap">Map</button>
+        <button id="toWeapon">Weapon</button>
+      </div>
+      <div id="infoHolder">
+        <div id="map">
+          <div id="key">
+            <div id="keyHolder">
+              <div id="text">
+                <p>Player</p>
+                <p>Airlock</p>
+                <p>Turbine</p>
+                <p>Reactor</p>
+                <p>Controls</p>
+              </div>
+              <div id="button">
+                <button class="keyButton">Focus</button>
+                <button class="keyButton">Focus</button>
+                <button class="keyButton">Focus</button>
+                <button class="keyButton">Focus</button>
+                <button class="keyButton">Focus</button>
+              </div>
+            </div>
+          </div>
+          <div id="mapDisplay"></div>
+        </div>
+        <div id="weapons">
+          <div id="all">
+            <div id="allHolder">
+              <button class="allButton">Pistol</button>
+              <button class="allButton">Sniper</button>
+              <button class="allButton">Knife</button>
+              <button class="allButton">Example1</button>
+              <button class="allButton">Example2</button>
+              <button class="allButton">Example3</button>
+            </div>
+          </div>
+          <div id="display"></div>
+        </div>
+      </div>
+    </div>
+
+    <!--=== SETTINGS MENU === -->
+    
+    <div id="setting">
+      <div id="settingBackground"></div>
+      <button id="backk"><img src="/Import/Images/Back.png"></button>
+      <div id="settingsHolder">
+        <p style="color:white;">Sensitivity:</p>
+        <input type="range" step="0.01" min="0.01" max="10" id="sliderSensitivity">
+        <input id="sliderOutput">
+        <p style="color:white;">Scope Sensitivity:</p>
+        <input type="range" step="0.01" min="0.01" max="10" id="sliderScope">
+        <input id="scopeOutput">
+        <p style="color:white;">Audio Volume:</p>
+        <input type="range" step="0.01" min="0.01" max="0.5" id="volume">
+        <p style="color:white;">SSAA Samples:</p>
+        <select id="samples">
+          <option value="0">1 Sample</option>
+          <option value="1">2 Sample</option>
+          <option value="2">4 Sample</option>
+          <option value="3">8 Sample</option>
+          <option value="4">16 Sample</option>
+          <option value="5">32 Sample</option>
+        </select>
+        <p style="color:white;">FXAA Effect:</p>
+        <input type="checkbox" id="effectCheck" >
+        <p style="color:white;">FOV:</p>
+        <input type="range" step="0.01" min="60" max="120" id="fov">
+<!--         <p style="color:white;">Weapon Fov:</p>
+        <input type="range" step="0.01" min="60" max="120" id="FOV">
+        <div id="offsetDisplay">
+          <div id="reference"></div>
+        </div> -->
+        <p style="color:white;">X</p>
+        <input type="range" step="0.01" min="-8" max="8" id="x">
+        <p style="color:white;">Y</p>
+        <input type="range" step="0.01" min="-8" max="8" id="y">
+        <p style="color:white;">Z</p>
+        <input type="range" step="0.01" min="-16" max="0" id="z">
+      </div>
+    </div>
+
+    <!--=== WIN / LOSE SCREEN === -->
+
+    <div id="win">
+      <p>YOU WIN!</p>
+      <br>
+      <p>Your time was:</p>
+      <p id="time"></p>
+      <br>
+      <button class="main">MAIN MENU</button>
+    </div>
+    
+    <div id="lose">
+      <p>YOU LOSE!</p>
+      <br>
+      <p>Maybe get better next time</p>
+      <br>
+      <button class="main">MAIN MENU</button>
+    </div>
+
+    <!--=== KEYBINDS MENU ===-->
+    
+    <div id="keybinds">
+      <div id="keybindsContent">
+        <button id="back">Back</button>
+        <button id="default">Set Default</button>
+        <h1 style="color:white;text-align:center;margin:0;">Keybinds:</h1>
+        <hr>
+        <details>
+          <summary style="color:white;margin:5px;">Movement</summary>
+          <div id="movement">
+            <div class="div">
+              <p class="name">Forward</p>
+              <button class="button">Edit</button>
+              <p class="output">KeyW</p>
+            </div>
+            <hr>
+            <div class="div">
+              <p class="name">Backward</p>
+              <button class="button">Edit</button>
+              <p class="output">KeyS</p>
+            </div>
+            <hr>
+            <div class="div">
+              <p class="name">Left</p>
+              <button class="button">Edit</button>
+              <p class="output">KeyA</p>
+            </div>
+            <hr>
+            <div class="div">
+              <p class="name">Right</p>
+              <button class="button">Edit</button>
+              <p class="output">KeyD</p>
+            </div>
+            <hr>
+            <div class="div">
+              <p class="name">Jump</p>
+              <button class="button">Edit</button>
+              <p class="output">Space</p>
+            </div>
+            <hr>
+            <div class="div">
+              <p class="name">Sprint</p>
+              <button class="button">Edit</button>
+              <p class="output">ShiftLeft</p>
+            </div>
+            <hr>
+            <div class="div">
+              <p class="name">Crouch</p>
+              <button class="button">Edit</button>
+              <p class="output">ControlLeft</p>
+            </div>
+          </div>
+        </details>
+        <details>
+          <summary style="color:white;margin:5px;">Weapon</summary>
+          <div id="weapon">
+            <div class="div">
+              <p class="name">Reload</p>
+              <p class="output"></p>
+              <button class="button">Edit</button>
+            </div>
+            <hr>
+            <div class="div">
+              <p class="name">Aim</p>
+              <p class="output"></p>
+              <button class="button">Edit</button>
+            </div>
+            <hr>
+            <div class="div">
+              <p class="name">Shoot</p>
+              <p class="output"></p>
+              <button class="button">Edit</button>
+            </div>
+            <hr>
+            <div class="div">
+              <p class="name">Primary Weapon</p>
+              <p class="output"></p>
+              <button class="button">Edit</button>
+            </div>
+            <hr>
+            <div class="div">
+              <p class="name">Secondary Weapon</p>
+              <p class="output"></p>
+              <button class="button">Edit</button>
+            </div>
+            <hr>
+            <div class="div">
+              <p class="name">Melee Weapon</p>
+              <p class="output"></p>
+              <button class="button">Edit</button>
+            </div>
+            <hr>
+            <div class="div">
+              <p class="name">Inspect</p>
+              <p class="output"></p>
+              <button class="button">Edit</button>
+            </div>
+          </div>
+      </div>
+    </div>
+
+    <!--=== START SCREEN ===-->
+    
+    <div id="start">
+    </div>
+    <div id="startContent">
+      <div id="logo">
+      </div>
+      <div class="buttons">
+        <button id="newGame"><img src="/Import/Images/New Game.png"></button>
+<!--         <button id="loadGame"><img src="/Import/Images/Load Game.png"></button> -->
+        <button class="settings"><img src="/Import/Images/Settings.png"></button>
+        <button id="quit"><img src="/Import/Images/Quit.png"></button>
+      </div>
+    </div>
+
+    <!--=== LOADING BACKGROUNDS ===-->
+    
+    <div id="slides">
+      <div id="first"></div>
+      <div id="second"></div>
+      <div id="third"></div>
+      <div id="fourth"></div>
+      <div id="loading">
+        <div id="bar"></div>
+      </div>
+    </div>
+    
+    <div id="black"></div>
+
+    <!--=== IN-GAME MENU ===-->
+    
+    <div id="menu">
+      <div id="menuBackground"></div>
+      <div id="menuContent">
+        <div>
+<!--           <p style="color:white;font-size:50px;margin-bottom:10px;">Menu</p>
+          <hr> -->
+        </div>
+        <div class="buttons">
+          <button id="resume"><img src="/Import/Images/Resume.png"></button>
+          <button class="settings"><img src="/Import/Images/Settings.png"></button>
+<!--           <button id="saveGame"><img src="/Import/Images/Save Game.png"></button> -->
+          <button class="main"><img src="/Import/Images/Main Menu.png"></button>
+        </div>
+      </div>
+    </div>
+
+    <!--=== CONFIRMATION ===-->
+  
+    <div id="confirm">
+      <div id="confirmHolder">
+        <p>Are you sure?</p>
+        <p>Unsaved content will be lost</p>
+        <div id="dabuttons">
+          <button id="yes">YES</button>
+          <button id="no">NO</button>
+        </div>
+      </div>
+    </div>
+
+    <!--=== CROSSHAIR ===-->
+    
+    <div id="crossHairHolder">
+      <div id="crossHair"></div>
+      <img src="/Import/Images/Sniper Scope.png" id="SniperScope">
+    </div>
+
+    <!--=== CONSOLE ===-->
+    
+    <div id="consoleHolder">
+      <div id="consoleOutput"><ul id="list"></ul></div>
+      <div contenteditable="true" id="consoleInput"></div>
+    </div>
+
+    <!--=== SCRIPTS ===-->
+    
+    <script type="module" src="script.js"></script>
+    <script type="module" src="weaponView.js"></script>
+    <script type="module" src="weaponDisplay.js"></script>
+    <script type="module" src="mapDisplay.js"></script>
+    <script type="module" src="dev.js"></script>
+    <script type="module" src="menu.js"></script>
+    <script type="module" src="audio.js"></script>
+    <script type="module" src="mobile.js"></script>
+
+
+    <!--=== GAME ===-->
+    
+    <div id="hud">
+      <div id="hit"></div>
+      <p id="realTimeInfo"></p>
+      <div id="left">
+        <div id="sheild">
+          <div id="snumber">
+            <p>100</p>
+          </div>
+          <div id="sheildIcon">
+            <img src="/Import/Images/sheild.png">
+          </div>
+          <div id="sheildBack">
+            <div id="sheildBar"></div>
+          </div>
+        </div>
+        <div id="health">
+          <div id="hnumber">
+            <p>100</p>
+          </div>
+          <div id="healthIcon">
+            <img src="/Import/Images/health.png">
+          </div>
+          <div id="healthBack">
+            <div id="healthBar"></div>
+          </div>
+        </div>
+      </div>
+      <div id="right">
+        <div id="rightHolder">
+          <div id="weapInfo">
+            <p id="name">Pistol</p>
+          </div>
+          <div id="ammunition">
+            <div id="ammoBack">
+              <div id="ammoBar"></div>
+            </div>
+          </div>
+        </div>
+        <div id="weaponIcon">
+          <img id="imgPistol" src="/Import/Images/pistol.png">
+          <img id="imgSniper" src="/Import/Images/sniper.png">
+          <img id="imgKnife" src="/Import/Images/knife.png">
+          <img id="imgRifle" src="/Import/Images/rifle.png">
+        </div>
+      </div>
+    </div>
+    <div id="weaponView" style="position:absolute;height:100%;width:100%;"></div>
+    <div id="labelRenderer"></div>
+    <div id="game" ></div>
+    
+  </body>
+</html>
