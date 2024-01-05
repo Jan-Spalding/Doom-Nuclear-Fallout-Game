@@ -2,7 +2,7 @@ import {
 	Matrix4,
 	Object3D,
 	Vector3
-} from '/Import/Three.js/three.module.js';
+} from './Import/Three.js/three.module.js';
 
 class CSS2DObject extends Object3D {
 
