@@ -2,7 +2,7 @@ body {
   margin:0;
   padding:0;
   overflow:hidden;
-  cursor: url("/Import/Images/Custom Cursor.png"), default;
+  cursor: url("./Import/Images/Custom Cursor.png"), default;
   font-family:arial;
   color:white;
 }
@@ -23,7 +23,7 @@ body {
   position:absolute;
   height:100%;
   width:100%;
-  background: url("/Import/Images/menuBackground.gif");
+  background: url("./Import/Images/menuBackground.gif");
   filter: blur(6px);
   background-position:center;
   background-size:cover;
@@ -79,7 +79,7 @@ p {
   justify-content:center;
   align-items:center;
   z-index:9;
-  background-image: url("/Import/Images/Background.jpg");
+  background-image: url("./Import/Images/Background.jpg");
   filter: blur(6px);
   background-position:center;
   background-size:cover;
@@ -100,7 +100,7 @@ p {
   position:relative;
   height:40%;
   width:50%;
-  background-image: url("/Import/Images/Logo.png");
+  background-image: url("./Import/Images/Logo.png");
   background-size:cover;
   background-repeat:no-repeat;
   background-position:center;
@@ -121,7 +121,7 @@ p {
   border:none;
   background:none;
   margin-bottom:20px;
-  cursor: url("/Import/Images/Custom Pointer.png"), pointer;
+  cursor: url("./Import/Images/Custom Pointer.png"), pointer;
 }
 
 .buttons button:hover {
@@ -201,7 +201,7 @@ p {
   height:100%;
   width:100%;
   opacity:0;
-  background-image: url("/Import/Images/img1.jpg");
+  background-image: url("./Import/Images/img1.jpg");
   background-size:cover;
   background-repeat:no-repeat;
   background-position:center;
@@ -216,7 +216,7 @@ p {
   height:100%;
   width:100%;
   opacity:0;
-  background-image: url("/Import/Images/img2.jpg");
+  background-image: url("./Import/Images/img2.jpg");
   background-size:cover;
   background-repeat:no-repeat;
   background-position:center;
@@ -230,7 +230,7 @@ p {
   height:100%;
   width:100%;
   opacity:0;
-  background-image: url("/Import/Images/img3.jpg");
+  background-image: url("./Import/Images/img3.jpg");
   background-size:cover;
   background-repeat:no-repeat;
   background-position:center;
@@ -244,7 +244,7 @@ p {
   height:100%;
   width:100%;
   opacity:0;
-  background-image: url("/Import/Images/img4.jpg");
+  background-image: url("./Import/Images/img4.jpg");
   background-size:cover;
   background-repeat:no-repeat;
   background-position:center;
@@ -350,7 +350,7 @@ p {
   position:absolute;
   height:100%;
   width:100%;
-  background: url("/Import/Images/skull.jpg");
+  background: url("./Import/Images/skull.jpg");
   filter: blur(6px);
   background-size:cover;
   background-repeat:no-repeat;
@@ -372,7 +372,7 @@ p {
   bottom:5%;
   left:0;
   z-index:12;
-  cursor: url("/Import/Images/Custom Pointer.png"), pointer;
+  cursor: url("./Import/Images/Custom Pointer.png"), pointer;
 }
 
 #backk:hover {
@@ -776,7 +776,7 @@ p {
   opacity:0;
   height:100%;
   width:100%;
-  background: url("/Import/Images/Hit.png");
+  background: url("./Import/Images/Hit.png");
   background-size:cover;
   background-repeat:no-repeat;
   background-position:center;
