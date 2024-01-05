@@ -1256,8 +1256,8 @@ let condition = true
 
 
 // === INFO MENU ===
-import { Mapupdate } from "/mapDisplay.js"
-import { Weaponupdate } from "/weaponDisplay.js"
+import { Mapupdate } from "./mapDisplay.js"
+import { Weaponupdate } from "./weaponDisplay.js"
 
 let info = false
 
@@ -1282,8 +1282,8 @@ window.addEventListener("keydown", function(event) {
 
 let hold = false
 
-import {ammo} from "/weaponView.js"
-import {animations} from "/weaponView.js"
+import {ammo} from "./weaponView.js"
+import {animations} from "./weaponView.js"
 let ammoBar = document.getElementById("ammoBar")
 
 let conditions = {pistol:true, sniper:true, knife:true, rifle:true}
