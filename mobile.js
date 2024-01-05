@@ -1,4 +1,4 @@
-import {player, Gamecamera, zoomed, moveForward, moveBackward, moveRight, moveLeft, velocity} from "/script.js"
+import {player, Gamecamera, zoomed, moveForward, moveBackward, moveRight, moveLeft, velocity} from "./script.js"
 
 let menuButton, aimButton, jumpButton, background, pointer
 let marker
