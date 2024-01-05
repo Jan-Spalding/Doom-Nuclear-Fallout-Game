@@ -1,9 +1,9 @@
-import { init } from "/script.js"
-import { ready } from "/script.js"
-import {Play} from "/audio.js"
+import { init } from "./script.js"
+import { ready } from "./script.js"
+import {Play} from "./audio.js"
 
-import { Displayinit } from "/weaponDisplay.js"
-import { mapInit} from "/mapDisplay.js"
+import { Displayinit } from "./weaponDisplay.js"
+import { mapInit} from "./mapDisplay.js"
 
 let newGame = document.getElementById("newGame")
 let loadGame = document.getElementById("loadGame")
