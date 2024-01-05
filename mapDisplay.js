@@ -23,7 +23,7 @@ function mapInit() {
   scene.add(camera)
 
   let loader = new FBXLoader()
-  loader.load("/Import/Models/Maps/Map.fbx", function(object) {
+  loader.load("./Import/Models/Maps/Map.fbx", function(object) {
     object.position.set(0,0,0)
     object.scale.multiplyScalar(0.012)
     scene.add(object)
