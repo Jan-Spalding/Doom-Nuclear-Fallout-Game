@@ -1,5 +1,5 @@
-import * as THREE from "/Import/Three.js/three.module.js"
-import {Gamecamera, Displaymenu} from "/script.js"
+import * as THREE from "./Import/Three.js/three.module.js"
+import {Gamecamera, Displaymenu} from "./script.js"
 
 let playlist = []
 let musicPosition = 0
