@@ -2,9 +2,9 @@ import {
 	Euler,
 	EventDispatcher,
 	Vector3
-} from '/Import/Three.js/three.module.js';
+} from './Import/Three.js/three.module.js';
 
-import { player } from "/script.js"
+import { player } from "./script.js"
 
 const _euler = new Euler( 0, 0, 0, 'YXZ' );
 const _vector = new Vector3();
