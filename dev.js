@@ -1,4 +1,4 @@
-import {Gamescene, Gamecamera} from "/script.js"
+import {Gamescene, Gamecamera} from "./script.js"
 
 let con = false
 let noclip = false
