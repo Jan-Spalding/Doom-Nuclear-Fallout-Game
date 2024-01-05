@@ -116,7 +116,7 @@ function init() {
     MobileSetup()
   } else {
     const backgroundLoader = new THREE.TextureLoader();
-    const texture = backgroundLoader.load('/Import/Images/skybox.jpg', () => {
+    const texture = backgroundLoader.load('./Import/Images/skybox.jpg', () => {
       const rt = new THREE.WebGLCubeRenderTarget(texture.image.height);
       rt.fromEquirectangularTexture(renderer, texture);
       Gamescene.background = rt.texture;
@@ -140,7 +140,7 @@ function init() {
 
 
   let mapLoader = new FBXLoader()
-  mapLoader.load("/Import/Models/Maps/Map-8-Start.fbx", (object) => {
+  mapLoader.load("./Import/Models/Maps/Map-8-Start.fbx", (object) => {
     object.scale.multiplyScalar(0.12)
     object.position.set(0, 20, 0)
 
@@ -191,7 +191,7 @@ function init() {
     addLight(lights)
     spawnSetup(currentEnemies)
     
-    mapLoader.load("/Import/Models/Maps/Map-8-StartToTurbine.fbx", (object) => {
+    mapLoader.load("./Import/Models/Maps/Map-8-StartToTurbine.fbx", (object) => {
       object.scale.multiplyScalar(0.12)
       object.position.set(0, 20, 0)
   
@@ -237,7 +237,7 @@ function init() {
       mapContent.push(object)
       Gamescene.add(object)
       addLight(lights)
-      mapLoader.load("/Import/Models/Maps/Map-8-Turbine.fbx", (object) => {
+      mapLoader.load("./Import/Models/Maps/Map-8-Turbine.fbx", (object) => {
         object.scale.multiplyScalar(0.12)
         object.position.set(0, 20, 0)
 
@@ -292,7 +292,7 @@ function init() {
         makeGlass(glass)
         spawnSetup(currentEnemies)
     
-        mapLoader.load("/Import/Models/Maps/Map-8-TurbineToMain.fbx", (object) => {
+        mapLoader.load("./Import/Models/Maps/Map-8-TurbineToMain.fbx", (object) => {
           object.scale.multiplyScalar(0.12)
           object.position.set(0, 20, 0)
 
@@ -332,7 +332,7 @@ function init() {
           Gamescene.add(object)
           addLight(lights)
     
-          mapLoader.load("/Import/Models/Maps/Map-8-Main.fbx", (object) => {
+          mapLoader.load("./Import/Models/Maps/Map-8-Main.fbx", (object) => {
             object.scale.multiplyScalar(0.12)
             object.position.set(0, 20, 0)
 
@@ -376,7 +376,7 @@ function init() {
             mapContent.push(object)
             addLight(lights)
             spawnSetup(currentEnemies)
-            mapLoader.load("/Import/Models/Maps/Map-8-Doors.fbx", (object) => {
+            mapLoader.load("./Import/Models/Maps/Map-8-Doors.fbx", (object) => {
               object.scale.multiplyScalar(0.12)
               object.position.set(0, 20, 0)
     
@@ -402,7 +402,7 @@ function init() {
               }
               addLight(lights)
               Gamescene.add(object)
-              mapLoader.load("/Import/Models/Maps/Map-8-MainToControl.fbx", (object) => {
+              mapLoader.load("./Import/Models/Maps/Map-8-MainToControl.fbx", (object) => {
                 object.scale.multiplyScalar(0.12)
                 object.position.set(0, 20, 0)
     
@@ -429,7 +429,7 @@ function init() {
                 addLight(lights)
                 mapContent.push(object)
                 Gamescene.add(object)
-                mapLoader.load("/Import/Models/Maps/Map-8-Control.fbx", (object) => {
+                mapLoader.load("./Import/Models/Maps/Map-8-Control.fbx", (object) => {
                   object.scale.multiplyScalar(0.12)
                   object.position.set(0, 20, 0)
 
