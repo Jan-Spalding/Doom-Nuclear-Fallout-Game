@@ -1,4 +1,4 @@
-import { player } from "./script.js"
+import { player } from "Doom-Nuclear-Fallout-Game/script.js"
 
 var Stats = function () {
 
