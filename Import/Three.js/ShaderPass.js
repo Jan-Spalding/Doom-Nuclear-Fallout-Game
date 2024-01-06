@@ -1,8 +1,8 @@
 import {
 	ShaderMaterial,
 	UniformsUtils
-} from './Import/Three.js/three.module.js';
-import { Pass, FullScreenQuad } from './Import/Three.js/Pass.js';
+} from '/Doom-Nuclear-Fallout-Game/Import/Three.js/three.module.js';
+import { Pass, FullScreenQuad } from '/Doom-Nuclear-Fallout-Game/Import/Three.js/Pass.js';
 
 class ShaderPass extends Pass {
 
