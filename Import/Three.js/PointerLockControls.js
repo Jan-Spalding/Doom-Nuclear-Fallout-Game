@@ -4,7 +4,7 @@ import {
 	Vector3
 } from './Import/Three.js/three.module.js';
 
-import { player } from "./script.js"
+import { player } from "/Doom-Nuclear-Fallout-Game/script.js"
 
 const _euler = new Euler( 0, 0, 0, 'YXZ' );
 const _vector = new Vector3();
