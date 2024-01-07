@@ -1,4 +1,4 @@
-import { Pass } from './Import/Three.js/Pass.js';
+import { Pass } from '/Doom-Nuclear-Fallout-Game/Import/Three.js/Pass.js';
 
 class MaskPass extends Pass {
 
