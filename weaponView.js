@@ -47,7 +47,7 @@ function Viewinit() {
   let texture = new THREE.TextureLoader()
   
   let loader = new FBXLoader()
-  loader.load("/Import/Models/Pistol Animation.fbx", (object) => {
+  loader.load("./Import/Models/Pistol Animation.fbx", (object) => {
     object.scale.multiplyScalar(0.008)
     gunPistol = object
     // console.log(gunPistol)
@@ -58,7 +58,7 @@ function Viewinit() {
     Weaponscene.add(gunPistol)
     player.pistol = gunPistol
     
-    texture.load("/Import/Images/texturePistol.png", function(texture) {
+    texture.load("./Import/Images/texturePistol.png", function(texture) {
       gunPistol.children[1].material.map = texture
     })
 
@@ -70,7 +70,7 @@ function Viewinit() {
     animations.pFire.play()
     animations.pFire.enabled = false
     
-    loader.load("/Import/Models/Sniper Animation.fbx", (object) => {
+    loader.load("./Import/Models/Sniper Animation.fbx", (object) => {
       gunSniper = object
       // console.log(gunSniper)
       gunSniper.scale.multiplyScalar(0.005)
@@ -82,7 +82,7 @@ function Viewinit() {
       gunSniper.visible = false
       player.sniper = gunSniper
 
-      texture.load("/Import/Images/textureSniper.png", function(texture) {
+      texture.load("./Import/Images/textureSniper.png", function(texture) {
         gunSniper.children[0].material.map = texture
       })
 
@@ -94,7 +94,7 @@ function Viewinit() {
       animations.sFire.play()
       animations.sFire.enabled = false
       
-      loader.load("/Import/Models/Knife Animation.fbx", (object) => {
+      loader.load("./Import/Models/Knife Animation.fbx", (object) => {
         Knife = object
         // console.log(Knife)
         Knife.scale.multiplyScalar(0.015)
@@ -106,7 +106,7 @@ function Viewinit() {
         Weaponscene.add(Knife)
         Knife.visible = false
 
-        texture.load("/Import/Images/textureKnife.png", function(texture) {
+        texture.load("./Import/Images/textureKnife.png", function(texture) {
           Knife.children[0].material.map = texture
         })
 
@@ -119,7 +119,7 @@ function Viewinit() {
         animations.kFire.enabled = false
         
         
-        loader.load("/Import/Models/Rifle Animation.fbx", (object) => {
+        loader.load("./Import/Models/Rifle Animation.fbx", (object) => {
           gunRifle = object
           // console.log(gunRifle)
           gunRifle.scale.multiplyScalar(0.005)
@@ -130,7 +130,7 @@ function Viewinit() {
           Weaponscene.add(gunRifle)
           gunRifle.visible = false
 
-          texture.load("/Import/Images/textureRifle.png", function(texture) {
+          texture.load("./Import/Images/textureRifle.png", function(texture) {
             gunRifle.children[0].material.map = texture
           })
 
