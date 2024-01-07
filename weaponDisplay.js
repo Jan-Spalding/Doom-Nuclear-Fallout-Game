@@ -38,7 +38,7 @@ function Displayinit() {
   container.appendChild(renderer.domElement)
 
   let loader = new FBXLoader()
-  loader.load("/Import/Models/Pistol.fbx", function(object) {
+  loader.load("./Import/Models/Pistol.fbx", function(object) {
     object.position.set(0,0,0)
     object.scale.multiplyScalar(0.12)
     object.rotation.y -= Math.PI/2
