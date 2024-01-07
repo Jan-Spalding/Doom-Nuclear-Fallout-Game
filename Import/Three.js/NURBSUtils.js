@@ -1,7 +1,7 @@
 import {
 	Vector3,
 	Vector4
-} from './Import/Three.js/three.module.js';
+} from '/Doom-Nuclear-Fallout-Game/Import/Three.js/three.module.js';
 
 /**
  * NURBS utils
